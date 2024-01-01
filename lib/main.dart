@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'new_page.dart'; // Import the NewPage class
 
 void main() {
   runApp(const MyApp());
@@ -62,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               title: Text('New Page'),
               onTap: () {
-                // Navigate to the new page
+                // Navigate to the new page when the button is tapped
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => NewPage()),
@@ -94,21 +95,6 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ),
-    );
-  }
-}
-
-// Create a new page for navigation
-class NewPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('New Page'),
-      ),
-      body: Center(
-        child: Text('Welcome to the new page!'),
       ),
     );
   }
